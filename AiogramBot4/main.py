@@ -18,7 +18,8 @@ async def start():
     dp = Dispatcher()
     dp.startup.register(start_bot)
     dp.message.register(get_start, Command(commands='start'))
-    dp.callback_query.register(get_sex, F.data == 'man', F.data == 'woman')
+    dp.callback_query.register(get_sex, F.data == 'man')
+    dp.callback_query.register(get_sex, F.data == 'woman')
     # dp.callback_query.register(get_sex, F.data == 'woman')
     dp.message.register(get_answer, States.size)
     try:

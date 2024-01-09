@@ -31,4 +31,8 @@ async def get_answer(message: Message, state: FSMContext):
         await message.answer(f"Ты красотка!")
     elif context_data['sex'] == "woman" and context_data['size'] < 3:
         await message.answer(f"Тебе нужно больше кушать капусты!")
+    elif context_data['sex'] == "middle" and context_data['size'] >= 3:
+        await message.answer(f"У тебя большая голова!")
+    elif context_data['sex'] == "middle" and context_data['size'] < 3:
+        await message.answer(f"У тебя маленькая голова!")
     await state.clear()

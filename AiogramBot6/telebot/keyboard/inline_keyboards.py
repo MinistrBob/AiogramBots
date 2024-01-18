@@ -36,4 +36,4 @@ def get_files_keyboard(folder_name):
                 # print(file_path)
                 keyboard_builder.button(text=f"● {file}", callback_data=f"file_{folder_name}_{file}")
     keyboard_builder.adjust(1)
-    return keyboard_builder.as_markup(resize_keyboard=True)
+    return keyboard_builder.as_markup()
